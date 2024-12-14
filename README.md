@@ -6,12 +6,9 @@ Welcome to the **Spotify Clone Project**! This project aims to replicate the cor
 
 ## 🌟 Features
 
-- **User Authentication**: Secure login and sign-up functionality to protect user data.
-- **Music Library**: Browse and manage your music library effortlessly.
-- **Playlists**: Create, edit, and delete playlists with ease.
-- **Search Functionality**: Find your favorite songs, artists, and albums in seconds.
+- **Popular Turkish Artists**: Browse through a selection of popular Turkish artists.
+- **Popular Albüm's and Single's**: Check out the latest albums released in Turkey.
 - **Responsive Design**: Enjoy a seamless experience on both desktop and mobile devices.
-- **Player Controls**: Play, pause, skip, and control the volume of your music.
 
 ## 🚀 Getting Started
 
@@ -19,7 +16,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/)
+- [JavaScript]([[https://js.org/](https://www.javascript.com/)])
 - [Git](https://git-scm.com/)
 
 ### Installation
@@ -42,6 +39,7 @@ The application will be available at http://127.0.0.1:5500/html/index.html#
 ## 🛠️ Built With
 
 - **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **API**: Spotify API
 
 
 ## 🤝 Contributing
