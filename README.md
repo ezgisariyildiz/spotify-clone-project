@@ -39,4 +39,20 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 The application will be available at http://127.0.0.1:5500/html/index.html#
 
-**
+## 🛠️ Built With
+
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+
+
+## 🤝 Contributing
+ We welcome contributions to this project! If you have any ideas or find any bugs, feel free to create an issue or submit a pull request.
+
+1. Steps to Contribute
+2. Fork the repository.
+3. Create a new branch: git checkout -b feature/your-feature-name.
+4. Make your changes and commit them: git commit -m 'Add some feature'.
+5. Push to the branch: git push origin feature/your-feature-name.
+6. Open a pull request.
+
+## 💬 Contact
+- For any inquiries, please contact us at ezgisariyildiz0@gmail.com .
