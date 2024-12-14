@@ -16,7 +16,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ### Prerequisites
 
-- [JavaScript]([[https://js.org/](https://www.javascript.com/)])
+- [JavaScript](https://www.javascript.com/)
 - [Git](https://git-scm.com/)
 
 ### Installation
