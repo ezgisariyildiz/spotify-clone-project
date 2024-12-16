@@ -1,70 +1,101 @@
+/* Renk Değişkenleri */
+:root {
+    --bg-color: #121212;
+    --primary-color: #000000;
+    --accent-color: #282828;
+    --hover-color: #404040;
+    --text-color: #fff;
+    --secondary-text-color: #999999;
+}
+
+/* Genel Ayarlar */
 body {
-    background-color: #121212;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
 #wrapper {
-    background-color: #000000;
+    background-color: var(--primary-color);
     cursor: pointer;
     display: flex;
-    max-width: auto; /* Daha geniş bir maksimum genişlik */
     margin: 10px auto;
     padding: 10px 0;
+    max-width: auto;
+    /* Daha geniş bir maksimum genişlik */
+}
+
+#wrapper #logo-img img {
+    padding: 10px 0;
+    max-width: 40px;
 }
 
 .list-group #playlist {
     padding: 20px;
-    border: 1px solid #282828;
+    border: 1px solid var(--accent-color);
     border-radius: 20px;
-    background-color: #282828;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     font-size: small;
-}
-.list-group #playlist .btn{
-    border-radius: 20px;
 }
 
 #sidebar-wrapper {
-    width: 620px; /* Biraz daha geniş */
-    min-height: 100vh;
+    width: 450px;
+    /* Biraz daha geniş */
     cursor: pointer;
-    background-color: #121212;
+    background-color: var(--bg-color);
 }
 
 #sidebar-wrapper .sidebar-heading {
-    background-color: #000000;
+    background-color: var(--primary-color);
 }
 
 .list-group {
-    border: 1px solid #121212;
+    border: 1px solid var(--bg-color);
     cursor: pointer;
     padding: 15px;
     padding-bottom: 55px;
     border-radius: 20px;
     margin-bottom: 20px;
+    font-size: small;
+    font-weight: 600;
 }
 
-.list-group #bookshelf {
-    background-color: #121212;
+.list-group .btn h5 {
+    border: 1px solid var(--bg-color);
+    font-size: large;
+    font-weight: 600;
+}
+
+.list-group #playlist .btn {
+    border: 1px solid var(--bg-color);
+    padding: 10px 20px;
+    font-size: small;
+    font-weight: 700;
+}
+
+.list-group #playlist .btn:hover {
+    transform: scale(1.05);
+    background-color: var(--text-color);
 }
 
 #bookshelf {
-    background-color: #121212;
+    background-color: var(--bg-color);
 }
 
 /* Buton hover stili */
 .hover-button {
-    color: #999999; /* Butonun normal metin rengi */
-    background-color: #121212;
+    color: var(--secondary-text-color);
+    /* Butonun normal metin rengi */
+    background-color: var(--bg-color);
     border: none;
 }
 
 .hover-button:hover {
-    color: #fff; /* Butonun üzerine gelince metin rengini beyaz yap */
-    background-color: #121212; /* Arka plan rengini koru */
+    color: var(--text-color);
+    /* Butonun üzerine gelince metin rengini beyaz yap */
 }
 
 .sidebar-heading img {
@@ -76,37 +107,38 @@ body {
 #page-content-wrapper {
     flex-grow: 1;
     width: calc(100% - 270px);
-    background-color: #000000;
+    background-color: var(--primary-color);
     padding-right: 15px;
 }
 
 .navbar .nav-link {
     padding: 10px;
     margin: 5px 5px;
-    border: #000000;
+    border: var(--primary-color);
     border-radius: 35%;
-    background-color: #000000;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     font-weight: 600;
 }
+
 .navbar .nav-link-active {
     padding: 5px 40px;
     margin: 5px 5px;
     border-radius: 30px;
-    background-color: white;
-    border: #000000;
+    background-color: var(--text-color);
+    border: var(--primary-color);
     font-weight: 600;
 }
+
 .navbar .nav-link-active:hover {
     transform: scale(1.05);
-    background-color: white;
-    
+    background-color: var(--text-color);
 }
 
 .container-fluid {
     padding-right: 30px;
     padding-left: 30px;
-    background-color: #000000;
+    background-color: var(--primary-color);
 }
 
 .row {
@@ -114,28 +146,40 @@ body {
     margin-left: -15px;
 }
 
-/* Sanatçı ve albüm resimlerinin boyutunu ve şeklini değiştirme */
-.card-body{
-    background-color: #000000;
-    width: auto; /* Resmin genişliğini belirleyin */
-    height: auto; /* Resmin yüksekliğini belirleyin */
-    border-radius: 50%; /* Yuvarlak yapmak için */
-    object-fit: cover; /* Resmin düzgün şekilde sığmasını sağlar */
-    transition: transform 0.3s ease; /* Efekt geçişini düzenleme */
+.row .btn {
+    display: grid;
 }
 
-.card img{
-    background-color: #121212;
-    border-radius: 50%; /* Yuvarlak yapmak için */
-    object-fit: cover; /* Resmin düzgün şekilde sığmasını sağlar */
+/* Sanatçı ve albüm resimlerinin boyutunu ve şeklini değiştirme */
+.card-body {
+    background-color: var(--primary-color);
+    width: auto;
+    /* Resmin genişliğini belirleyin */
+    height: auto;
+    /* Resmin yüksekliğini belirleyin */
+    border-radius: 50%;
+    /* Yuvarlak yapmak için */
+    object-fit: cover;
+    /* Resmin düzgün şekilde sığmasını sağlar */
+    transition: transform 0.3s ease;
+    /* Efekt geçişini düzenleme */
+}
+
+.card img {
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    /* Yuvarlak yapmak için */
+    object-fit: cover;
+    /* Resmin düzgün şekilde sığmasını sağlar */
 }
 
 .card {
-    background-color: #000000;
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px; /* Aralarına boşluk ekleyebilirsiniz */
+    margin-bottom: 20px;
+    /* Aralarına boşluk ekleyebilirsiniz */
     transition: transform 0.3s ease;
 }
 
@@ -149,39 +193,18 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid #121212;
+    border-bottom: 1px solid var(--bg-color);
 }
 
 .form-control {
-    background-color: #121212;
+    background-color: var(--bg-color);
     border: none;
     border-radius: 50px;
-    color: white;
-    width: 70%; /* Daha geniş bir arama çubuğu */
+    color: var(--text-color);
+    width: 70%;
+    /* Daha geniş bir arama çubuğu */
     margin-right: 20px;
 }
-
-/* Container düzenlemeleri 
-#artists-container .col-lg-2, #albums-container .col-lg-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-/* Resim düzenlemeleri 
-.artist img, .album img {
-    width: 150px; /* Resmin genişliğini belirleyin 
-    height: 150px; /* Resmin yüksekliğini belirleyin 
-    border-radius: 10px; /* Hafif yuvarlak köşeler 
-    object-fit: cover; /* Resmin düzgün şekilde sığmasını sağlar 
-    transition: transform 0.3s ease; /* Efekt geçişini düzenleme 
-}
-
-.artist img:hover, .album img:hover {
-    transform: scale(1.05); /* Resmi hafifçe büyütme 
-}
-*/
 
 /* "Tümünü göster" butonu */
 .btn-link {
@@ -195,36 +218,33 @@ body {
 
 .footer {
     padding: 20px 0;
-    border-top: 1px solid #282828;
+    border-top: 1px solid var(--accent-color);
 }
 
 .footer ul {
     margin: 5px 10px;
-    padding: 20px;
-    display: flex;
+    padding: 0;
+    display: block;
 }
 
 .footer ul li {
     margin: 10px;
-    display: flex;
-    justify-content: flex-start;
+    display: inline-block;
+    justify-content: space-evenly;
     font-size: small;
-    color: #fff;
+    font-weight: 100;
+    color: var(--text-color);
 }
 
 .footer .language-btn {
     margin: 20px;
     border: none;
-    background-color: #000000;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
-}
-
-#page-content-wrapper {
-    background-color: #000000;
 }
 
 /* Scrollbar Özelleştirme */
@@ -233,16 +253,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #121212;
+    background: var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #404040;
+    background: var(--hover-color);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #121212;
+    background: var(--bg-color);
 }
 
 /* Responsive Ayarlar */
@@ -250,7 +270,7 @@ body {
     #wrapper {
         max-width: 100%;
     }
-    
+
     #sidebar-wrapper {
         width: 250px;
     }

@@ -14,8 +14,8 @@
     <!-- Sidebar -->
     <div class="d-flex" id="wrapper">
         <div class="border-bottom" id="sidebar-wrapper">
-            <div class="sidebar-heading">
-                <img src="../img/logo.png" alt="Spotify">
+            <div class="sidebar-heading" id="logo-img">
+                <img src="../img/Spotify_Primary_Logo_RGB_White.png" alt="Spotify">
             </div>
             <div class="list-group">
                 <div class="list-group-item-action mb-3" id="bookshelf">
@@ -77,25 +77,38 @@
                 </ul>
             </nav>
 
-            <div class="container-fluid mt-4">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2 class="text-white mt-5">Popüler sanatçılar</h2>
-                    <button class="btn btn-link text-white">Tümünü göster</button>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <h2 class="text-white mt-5">Popüler Türk Sanatçıları</h2>
+                        <button class="btn btn-link text-white">Tümünü göster</button>
+                    </div>
                 </div>
-
                 <div class="row" id="artists-container">
-                    <!-- Sanatçılar dinamik olarak buraya eklenecek -->
+                    <!-- Sanatçılar buraya yüklenecek -->
                 </div>
-
-                <div class="d-flex justify-content-between align-items-center mt-5">
-                    <h2 class="text-white mt-5">Popüler albümler ve single'lar</h2>
-                    <button class="btn btn-link text-white">Tümünü göster</button>
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <h2 class="text-white mt-5">Popüler albümler ve single'lar</h2>
+                        <button class="btn btn-link text-white">Tümünü göster</button>
+                    </div>
                 </div>
-
                 <div class="row" id="albums-container">
-                    <!-- Albümler dinamik olarak buraya eklenecek -->
+                    <!-- Albümler buraya yüklenecek -->
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <h2 class="text-white mt-5">Popüler Çalma Listeleri</h2>
+                        <button class="btn btn-link text-white">Tümünü göster</button>
+                    </div>
+                </div>
+                <div class="row" id="playlists-container">
+                    <!-- Çalma Listeleri buraya yüklenecek -->
                 </div>
             </div>
+
+
+
         </div>
     </div>
 
