@@ -4,7 +4,6 @@ const artistsContainer = document.getElementById("artists-all-container");
 // Spotify API URL'si (Örnek: Popüler sanatçılar)
 const API_URL = "https://api.spotify.com/v1/browse/categories/popular-artists";
 
-// Token ayarlamanız gerekebilir, aşağıdaki örnek statik bir token kullanır
 const TOKEN = "YOUR_TOKEN";
 
 async function getAccessToken() {
@@ -35,7 +34,6 @@ async function getAccessToken() {
         console.error("Error getting token:", error);
     }
 }
-
 
 // API'den sanatçı bilgilerini çekme fonksiyonu
 async function fetchArtists() {
