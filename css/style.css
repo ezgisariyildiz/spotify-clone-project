@@ -146,9 +146,71 @@ body {
     margin-left: -15px;
 }
 
-.row .btn {
-    display: grid;
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.btn-show-all {
+    margin-left: auto;
+    color: var(--hover-color);
+    font-weight: 700;
+    font-size: small;
+
+}
+
+.btn-show-all:hover {
+    text-decoration-line: underline;
+    color:  var( --text-color);
+}
+
+/* Öne Çıkan Listeler Header düzenleme */
+#featured-lists-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* "Tümünü Göster" butonu */
+.btn-link {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff; /* Buton yazı rengi */
+    background-color: #282828; /* Buton arka plan rengi */
+    padding: 10px 20px; /* Buton iç boşlukları */
+    border-radius: 20px; /* Buton kenar yumuşatma */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hover efekti */
+}
+
+.btn-link:hover {
+    background-color: #121212; /* Hover sırasında arka plan rengi */
+    text-decoration: underline;
+}
+
+/* Öne çıkan listeler kart düzenleme */
+#featured-lists-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.list-card {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.list-card:hover {
+    transform: scale(1.05);
+}
+
 
 /* Sanatçı ve albüm resimlerinin boyutunu ve şeklini değiştirme */
 .card-body {
