@@ -1,6 +1,6 @@
 // Spotify API Yapılandırması
-const CLIENT_ID = '0f56c9fa43054320864dad4a724a065b';
-const CLIENT_SECRET = 'ae1351f687e3404bac606896feacd672';
+const CLIENT_ID = 'CLIENT_ID';
+const CLIENT_SECRET = 'CLIENT_SECRET';
 const REDIRECT_URI = 'http://127.0.0.1:5500/'; // Kendi local sunucunuzun adresi
 
 // Token alma fonksiyonu
