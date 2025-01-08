@@ -1,6 +1,6 @@
 // Spotify API Yapılandırması
-const CLIENT_ID = '0f56c9fa43054320864dad4a724a065b';
-const CLIENT_SECRET = 'ae1351f687e3404bac606896feacd672';
+const CLIENT_ID = 'CLIENT_ID';
+const CLIENT_SECRET = 'CLIENT_SECRET';
 const REDIRECT_URI = 'http://127.0.0.1:5500/'; // Kendi local sunucunuzun adresi
 
 // Token alma fonksiyonu
@@ -30,9 +30,9 @@ async function getSpotifyToken() {
 async function fetchPopularArtists() {
     try {
         const token = await getSpotifyToken();
-        const response = await fetch('https://api.spotify.com/v1/browse/new-releases?country=TR&limit=6', {
+        const response = await fetch('https://api.spotify.com/v1/artists?ids=1dfeR4HaWDbWqFHLkxsg1d', {
             headers: {
-                'Authorization': `Bearer ${token}`
+                "Authorization": `Bearer ${token}`
             }
         });
 
@@ -44,18 +44,13 @@ async function fetchPopularArtists() {
         const artistContainer = document.querySelector('#artists-container');
         artistContainer.innerHTML = '';
 
-        if (!data.artists || !data.artists.items) {
-            throw new Error('Beklenen formatta veri alınamadı.');
-        }
-
-        data.artists.items.forEach(artist => {
+        data.artists.forEach(artist => {
             const artistCard = `
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
                     <div class="card text-white">
-                        <img src="${artist.images[0].url}" class="card-img-top" alt="${artist.name}">
+                        <img src="${artist.images[0]?.url}" class="card-img-top" alt="${artist.name}">
                         <div class="card-body">
                             <h5 class="card-title">${artist.name}</h5>
-                            <p class="card-text">${album.artists[0].name}</p>
                         </div>
                     </div>
                 </div>
@@ -65,8 +60,7 @@ async function fetchPopularArtists() {
     } catch (error) {
         console.error('Sanatçıları çekerken hata oluştu:', error);
     }
-}
-    
+}    
 
 // Popüler Albümleri Çekme
 async function fetchPopularAlbums() {
@@ -74,7 +68,7 @@ async function fetchPopularAlbums() {
         const token = await getSpotifyToken();
         const response = await fetch('https://api.spotify.com/v1/browse/new-releases?country=TR&limit=6', {
             headers: {
-                'Authorization': `Bearer ${token}`
+                "Authorization": `Bearer ${token}`
             }
         });
 
@@ -115,7 +109,7 @@ async function fetchFeaturedPlaylists() {
         const token = await getSpotifyToken();
         const response = await fetch('---', {
             headers: {
-                'Authorization': `Bearer ${token}`
+                "Authorization": `Bearer ${token}`
             }
         });
 

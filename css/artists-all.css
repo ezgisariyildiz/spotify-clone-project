@@ -10,10 +10,11 @@ h1 {
 }
 
 .artists-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
+    display: flex;
+    color: var(--hover-color);
+    font-weight: 100;
+    font-size: small;
+    max-width: 50%;
 }
 
 .artist-card {
